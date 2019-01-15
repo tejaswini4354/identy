@@ -1,3 +1,4 @@
+import tensorflow as tf
 class MultiplicationLayer(tf.keras.layers.Layer):
   def __init__(self, num_outputs):
     super(MultiplicationLayer, self).__init__()
@@ -11,6 +12,6 @@ class MultiplicationLayer(tf.keras.layers.Layer):
   def call(self, input):
     return tf.matmul(input, 255)
   
-layer = MyDenseLayer(10)
+layer = MultiplicationLayer(10)
 print(layer(tf.zeros([10, 5])))
 print(layer.variables)
