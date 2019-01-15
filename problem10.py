@@ -10,8 +10,7 @@ class MultiplicationLayer(tf.keras.layers.Layer):
                                            self.num_outputs])
     
   def call(self, input):
-    return tf.matmul(input, 255)
+    print(input)
+    return input*255  
   
 layer = MultiplicationLayer(10)
-print(layer(tf.zeros([10, 5])))
-print(layer.variables)
